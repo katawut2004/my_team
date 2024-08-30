@@ -5,27 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background: #FFCDAA; /* เปลี่ยนสีพื้นหลังเป็นสีเหลือง */
+            background: #FFCDAA; /* เปลี่ยนสีพื้นหลังเป็นสีครีม */
         }
 
         /* สไตล์ของคำว่า "Login" */
         .login-title {
-            font-size: 70px; /* ขยายขนาดคำ */
+            font-size: 98px; /* ขยายขนาดคำ */
             color: black; /* กำหนดสีของคำ */
             font-weight: bold; /* ทำให้ตัวหนา */
         }
 
-        /* สไตล์ของปุ่ม Login */
-        .btn-white {
-            background: #9cb989; /* สีที่เปลี่ยนเมื่อ hover */
+        /* สไตล์พื้นฐานของปุ่ม */
+        .btn-custom {
+            /* font-weight: bold; ทำให้ตัวหนา */
+            color: #000000; /* กำหนดสีของข้อความ */
+            border: none; /* ลบขอบ */
+            transition: background-color 0.3s; /* เพิ่มการเปลี่ยนแปลงที่ลื่นไหล */
+            padding: -5px 2px; /* ขนาดของปุ่ม */
+            border-radius: 8px; /* มุมโค้งของปุ่ม */
         }
 
-        .btn-white:hover {
-            background-color: #f0f0f0; /* สีที่เปลี่ยนเมื่อ hover */
+        /* สไตล์ของปุ่ม Login */
+        .btn-login {
+            background-color: #9cb989; /* สีพื้นหลังของปุ่ม Login */
         }
+
+        .btn-login:hover {
+            background-color: #7f9670; /* สีที่เปลี่ยนเมื่อ hover */
+        }
+
+        /* สไตล์ของปุ่ม Call Me */
+        .btn-call-me {
+            background-color: #9cb989; /* สีพื้นหลังของปุ่ม Call Me */
+        }
+
+        .btn-call-me:hover {
+            background-color: #7f9670; /* สีที่เปลี่ยนเมื่อ hover */
+        }
+
+
 
         .form-control:hover {
             background-color: #f0f0f0; /* สีที่เปลี่ยนเมื่อ hover */
@@ -33,14 +53,13 @@
         }
 
         .form-control {
-    background-color: #7f9670; /* สีพื้นหลังเป็นสีเขียวเข้ม */
-    color: #9cb989; /* เปลี่ยนสีของตัวอักษรเป็นสีขาวเพื่อความชัดเจน */
-}
+            background-color: #7f9670; /* สีพื้นหลังเป็นสีเขียวเข้ม */
+            color: #000000; /* เปลี่ยนสีของตัวอักษรเป็นสีดำเพื่อความชัดเจน */
+        }
 
-.form-control::placeholder {
-    color: #9cb989; /* สีของ placeholder ให้เป็นสีเทาอ่อนเพื่อให้มองเห็นได้ชัด */
-}
-
+        .form-control::placeholder {
+            color: #000000; /* เปลี่ยนสีของ placeholder ให้เป็นสีดำ */
+        }
     </style>
 </head>
 <body>
@@ -57,7 +76,12 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Enter your password">
                     </div>
-                    <button type="submit" class="btn btn-white w-100">Login</button>
+
+                    <!-- ปุ่ม Login -->
+                    <p><button type="submit" class="btn btn-custom btn-login w-100">Login</button></p>
+
+                    <!-- ปุ่ม Call Me -->
+                    <p><a href="call_me.html" class="btn btn-custom btn-call-me w-100 mt-3">Call Me</a></p>
                 </form>
                 <p class="text-center mt-3">Don't have an account? <a href="register.html">Register</a></p>
             </div>
